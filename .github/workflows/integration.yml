@@ -14,7 +14,9 @@ jobs:
           npm install
 
       - name: Build project assets
-        run: npm run build
+        run: |
+          cd quote-generator/backend
+          npm run build
 
       - name: upload static web content
         uses: actions/upload-artifact@v4.6.2
